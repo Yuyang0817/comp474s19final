@@ -53,10 +53,13 @@ This repo contains code for the final project of COMP 474, offered by Loyola Uni
 The following are the most-current mockups of the application interfaces:
 
 *The Primary Interface*
+
 ![](https://docs.google.com/drawings/d/sNWsLeWmKPSBR9fFCZ26ULQ/image?w=341&h=202&rev=257&ac=1&parent=1Di4C-ljlBX7sI4iNHnmsX2p94pMSmGGvsUq-GMB_iIg)
 
 *The “Set Score” Screen*
+
 ![](https://lh6.googleusercontent.com/tuwwKMf8lcLOzFbe7hbhosmMG-y-dp10IqlRGcQ0w0lUKew9TdphNNsRbFRRUR6T_C4FJJ1FjLqBEIPnDjbLUMYaBvrqUU-Rz8oT02E)
 
 *The “Set Time” Screen*
+
 ![](https://docs.google.com/drawings/d/srx2RDtZXXDHvl9sJeHuTrA/image?w=338&h=193&rev=50&ac=1&parent=1Di4C-ljlBX7sI4iNHnmsX2p94pMSmGGvsUq-GMB_iIg)

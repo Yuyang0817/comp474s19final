@@ -63,3 +63,12 @@ The following are the most-current mockups of the application interfaces:
 *The “Set Time” Screen*
 
 ![](https://docs.google.com/drawings/d/srx2RDtZXXDHvl9sJeHuTrA/image?w=338&h=193&rev=50&ac=1&parent=1Di4C-ljlBX7sI4iNHnmsX2p94pMSmGGvsUq-GMB_iIg)
+
+---
+#Sprint 1
+##Project Roles
+**Jess** - Research Java graphics and implement basic interface.
+
+**Yuyang & Anjali** - Implement timer and basic methods, text-based if necessary.
+
+**Cong** - Implement score counters and basic methods, text based if necessary.

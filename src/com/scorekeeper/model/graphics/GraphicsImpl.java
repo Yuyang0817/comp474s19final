@@ -1,12 +1,6 @@
 package com.scorekeeper.model.graphics;
 
-import java.awt.BorderLayout;
-import java.awt.GraphicsConfiguration;
-import java.awt.TextField;
-
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JTextField;
 
 public class GraphicsImpl implements Graphics
 {
@@ -16,14 +10,8 @@ public class GraphicsImpl implements Graphics
 		frame.setSize(1450, 800); //Set window size
 		
 		//Create scoreboxes
-		final JTextField scorebox1=new JTextField("0"); //Default value is 0
-		scorebox1.setBounds(25, 200, 675, 400); //Sets location & size
-		scorebox1.setEditable(false); //You cannot type into this box
-		scorebox1.setHorizontalAlignment(JTextField.CENTER); //Center the text in the box
-	    final JTextField scorebox2=new JTextField("0"); //Default value is 0
-		scorebox2.setBounds(750, 200, 675, 400); //Sets location & size
-		scorebox2.setEditable(false); //You cannot type into this box
-		scorebox2.setHorizontalAlignment(JTextField.CENTER); //Center the text in the box
+		final Scorebox scorebox1=new Scorebox("0", 25, 200, 675, 400); //Set default value & position
+	    final Scorebox scorebox2=new Scorebox("0", 750, 200, 675, 400); //Set default value & position
 		
 		//Add scoreboxes to window
 	    frame.add(scorebox1);

@@ -6,10 +6,11 @@ import java.awt.GraphicsConfiguration;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class GraphicsImpl
+public class GraphicsImpl implements Graphics
 {
 	static GraphicsConfiguration gc;
-	public static void main(String[] args){
+	public void start()
+	{
 		JFrame frame= new JFrame(gc);	
 		frame.setTitle("Quidditch Scorekeeper");
 		frame.setSize(1450, 800);

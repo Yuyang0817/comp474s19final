@@ -1,9 +1,13 @@
 package com.scorekeeper.client;
 
+import com.scorekeeper.model.graphics.Graphics;
+import com.scorekeeper.model.graphics.GraphicsImpl;
+
 public class ScoreboardClient
 {
 	public static void main(String args[])
 	{
-		System.out.println("Hello World!");
+		Graphics testImplementation = new GraphicsImpl();
+		testImplementation.start();
 	}
 }

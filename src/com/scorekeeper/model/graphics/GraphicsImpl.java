@@ -9,6 +9,10 @@ public class GraphicsImpl implements Graphics
 		JFrame frame= new JFrame("Quidditch Scorekeeper"); //Create window with title "Quidditch Scorekeeper"
 		frame.setSize(1450, 800); //Set window size
 		
+		//Create timebox
+		final Timebox timebox = new Timebox("00:00:00", 425, 25, 600, 150);
+		frame.add(timebox);
+		
 		//Create scoreboxes
 		final Scorebox scorebox1=new Scorebox("0", 25, 200, 675, 400); //Set default value & position
 	    final Scorebox scorebox2=new Scorebox("0", 750, 200, 675, 400); //Set default value & position

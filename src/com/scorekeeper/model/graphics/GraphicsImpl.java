@@ -73,6 +73,81 @@ public class GraphicsImpl implements Graphics
 		 */
 	    
 	    /*
+		 * Begin assignment of button functions
+		 */
+	    //Controls to update timer
+	    startTime.addActionListener(new ActionListener()
+	    {  
+	        public void actionPerformed(ActionEvent e)
+	        {  
+	        	//TODO
+	        }  
+	    }); 
+	    stopReset.addActionListener(new ActionListener()
+	    {  
+	        public void actionPerformed(ActionEvent e)
+	        {  
+	        	//TODO
+	        }  
+	    }); 
+	    setTime.addActionListener(new ActionListener()
+	    {  
+	        public void actionPerformed(ActionEvent e)
+	        {  
+	        	//TODO
+	        }  
+	    }); 
+	    
+	    //Controls to update scorebox1
+	    incrementScore1.addActionListener(new ActionListener()
+	    {  
+	        public void actionPerformed(ActionEvent e)
+	        {  
+	        	//TODO
+	        }  
+	    }); 
+	    decrementScore1.addActionListener(new ActionListener()
+	    {  
+	        public void actionPerformed(ActionEvent e)
+	        {  
+	        	//TODO
+	        }  
+	    }); 
+	    setScore1.addActionListener(new ActionListener()
+	    {  
+	        public void actionPerformed(ActionEvent e)
+	        {  
+	        	//TODO
+	        }  
+	    }); 
+	    
+	    //Controls to update scorebox2
+	    incrementScore2.addActionListener(new ActionListener()
+	    {  
+	        public void actionPerformed(ActionEvent e)
+	        {  
+	        	//TODO
+	        }  
+	    }); 
+	    decrementScore2.addActionListener(new ActionListener()
+	    {  
+	        public void actionPerformed(ActionEvent e)
+	        {  
+	        	//TODO
+	        }  
+	    }); 
+	    setScore2.addActionListener(new ActionListener()
+	    {  
+	        public void actionPerformed(ActionEvent e)
+	        {
+		        //TODO
+	        }  
+	    }); 
+	    /*
+		 * End assignment of button functions
+		 */
+	    
+	    /*
 		 * Begin adding items to window
 		 */
 		frame.add(timebox); //Add timer to window
@@ -97,7 +172,7 @@ public class GraphicsImpl implements Graphics
 	    frame.add(inputScore2);
 	    frame.add(setScore2);
 	    
-	    frame.add(notifications);
+	    frame.add(notifications); //Add notification functions
 	    frame.add(acknowledge);
 	    /*
 		 * End adding items to window

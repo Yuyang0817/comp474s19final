@@ -1,9 +1,9 @@
 package com.scorekeeper.model.graphics;
 
-import java.awt.Button;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import com.scorekeeper.model.scoreboard.Scoreboard;
@@ -31,35 +31,35 @@ public class GraphicsImpl implements Graphics
 	    final QTextField scorebox2=new QTextField("0", 2, 750, 200, 675, 400); //Set default value & position
 		
 	    //Create time controls
-	    Button startTime=new Button("Start"); //This is the start button
+	    JButton startTime=new JButton("Start"); //This is the start button
 	    startTime.setBounds(25,25,150,150); //Set startTime's location
-	    Button stopReset=new Button("Stop/Reset"); //This is the stop/reset button
+	    JButton stopReset=new JButton("Stop/Reset"); //This is the stop/reset button
 	    stopReset.setBounds(185,25,150,150); //Set stop/reset's location
 	    QTextField inputTime = new QTextField("00:00:00", 3, frame.getWidth()-350, 25, 325, 70); //Add textbox for setTime to use
-	    Button setTime=new Button("Set Time"); //This is the setTime button 
+	    JButton setTime=new JButton("Set Time"); //This is the setTime button 
 	    setTime.setBounds(frame.getWidth()-350,105,325,70); //Set setTime's location
 
 	    //Create score1 controls
-	    Button incrementScore1=new Button("+10"); //This button increments score1
+	    JButton incrementScore1=new JButton("+10"); //This button increments score1
 	    incrementScore1.setBounds(25,610,100,100); //Set incrementScore1's location
-	    Button decrementScore1=new Button("-10"); //This button decrements score1
+	    JButton decrementScore1=new JButton("-10"); //This button decrements score1
 	    decrementScore1.setBounds(130,610,100,100); //Set decrementScore1's location
 	    QTextField inputScore1 = new QTextField("000", 4, 240, 610, 210, 100); //Add textbox for setScore1 to use
-	    Button setScore1=new Button("Set Score"); //This button sets score1
+	    JButton setScore1=new JButton("Set Score"); //This button sets score1
 	    setScore1.setBounds(490,610,210,100); //Set setScore1's location
 	    
 	    //Create score2 controls
-	    Button incrementScore2=new Button("+10"); //This button increments score2
+	    JButton incrementScore2=new JButton("+10"); //This button increments score2
 	    incrementScore2.setBounds(750,610,100,100); //Set incrementScore2's location
-	    Button decrementScore2=new Button("-10"); //This button decrements score2
+	    JButton decrementScore2=new JButton("-10"); //This button decrements score2
 	    decrementScore2.setBounds(860,610,100,100); //Set decrementScore2's location
 	    QTextField inputScore2 = new QTextField("000", 4, 970, 610, 210, 100); //Add textbox for setScore2 to use
-	    Button setScore2=new Button("Set Score"); //This button sets score2
+	    JButton setScore2=new JButton("Set Score"); //This button sets score2
 	    setScore2.setBounds(1210,610,210,100); //Set setScore2's location
 	    
 	    //Create notification box & acknowledgement button
 	    QTextField notifications = new QTextField("", 5, 25, frame.getHeight()-80, 1000, 50); //Add textbox for setScore2 to use
-	    Button acknowledge=new Button("Clear Notification"); //This button sets score2
+	    JButton acknowledge=new JButton("Clear Notification"); //This button sets score2
 	    acknowledge.setBounds(1035, frame.getHeight()-80, 390, 50); //Set setScore2's location
 	    /*
 		 * End creation of buttons & windows

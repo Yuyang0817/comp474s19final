@@ -15,12 +15,18 @@ public class TimerImpl implements Timer
 		this.seconds = 0;
 	}
 	
+	public TimerImpl(String time)
+	{
+		//TODO
+	}
+	
 	/**
 	 * @param hours
 	 * @param minutes
 	 * @param seconds
 	 */
-	public TimerImpl(int hours, int minutes, int seconds) {
+	public TimerImpl(int hours, int minutes, int seconds)
+	{
 		this.hours = hours;
 		this.minutes = minutes;
 		this.seconds = seconds;
@@ -31,7 +37,7 @@ public class TimerImpl implements Timer
 	 */
 	public void startTime()
 	{
-		
+		//TODO
 	}
 	
 	/**
@@ -39,7 +45,7 @@ public class TimerImpl implements Timer
 	 */
 	public void stopTime()
 	{
-		
+		//TODO
 	}
 	
 	/**
@@ -47,7 +53,8 @@ public class TimerImpl implements Timer
 	 */
 	public int[] getTime()
 	{
-		return new int[] {hours,minutes,seconds};
+		//TODO
+		return new int[]{};
 	}
 	
 	/**
@@ -57,8 +64,12 @@ public class TimerImpl implements Timer
 	 */
 	public void setTime(int hours, int minutes, int seconds)
 	{
-		this.hours = hours;
-		this.minutes = minutes;
-		this.seconds = seconds;
+		//TODO
+	}
+
+	@Override
+	public void setTime(String time)
+	{
+		//TODO
 	}
 }

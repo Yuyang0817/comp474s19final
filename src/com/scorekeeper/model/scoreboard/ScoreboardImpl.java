@@ -20,25 +20,8 @@ public class ScoreboardImpl implements Scoreboard
 	 */
 	public ScoreboardImpl(int score1, int score2)
 	{
-		if(score1 % 10 == 0)
-		{
-			this.score1 = score1;
-		}
-		else
-		{
-			this.score1 = 0;
-		}
-		
-		if(score2 % 10 == 0)
-		{
-			this.score2 = score2;
-		}
-		else
-		{
-			this.score2 = 0;
-		}
+		//TODO
 	}
-	
 	
 	/**
 	 * @return the score1
@@ -51,12 +34,10 @@ public class ScoreboardImpl implements Scoreboard
 	/**
 	 * @param score1 the score1 to set
 	 */
-	public void setScore1(int score1)
+	public int setScore1(int score1)
 	{
-		if(score1 % 10 == 0)
-		{
-			this.score1 = score1;
-		}
+		//TODO
+		return 0;
 	}
 
 	/**
@@ -70,45 +51,55 @@ public class ScoreboardImpl implements Scoreboard
 	/**
 	 * @param score2 the score2 to set
 	 */
-	public void setScore2(int score2)
+	public int setScore2(int score2)
 	{
-		if(score2 % 10 == 0)
-		{
-			this.score2 = score2;
-		}
+		//TODO
+		return 0;
 	}
 	
 	@Override
-	public void incrementScore1()
+	public int incrementScore1()
 	{
-		this.score1 += 10;
+		//TODO
+		return 0;
 	}
 	
 	@Override
-	public void incrementScore2()
+	public int incrementScore2()
 	{
-		this.score2 += 10;
+		//TODO
+		return 0;
+	}
+	
+	@Override
+	public int decrementScore1()
+	{
+		//TODO
+		return 0;
+	}
+	
+	@Override
+	public int decrementScore2()
+	{
+		//TODO
+		return 0;
 	}
 
 	@Override
 	public void resetScore1()
 	{
-		this.score1 = 0;
+		//TODO
 	}
 	
 	@Override
 	public void resetScore2()
 	{
-		this.score2 = 0;
-		
+		//TODO
 	}
 	
 	@Override
 	public void resetScores()
 	{
-		this.score1 = 0;
-		this.score2 = 0;
+		//TODO
 	}
-	
-	
 }

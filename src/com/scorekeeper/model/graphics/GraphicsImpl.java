@@ -44,7 +44,7 @@ public class GraphicsImpl implements Graphics
 	    incrementScore1.setBounds(25,610,100,100); //Set incrementScore1's location
 	    Button decrementScore1=new Button("-10"); //This button decrements score1
 	    decrementScore1.setBounds(130,610,100,100); //Set decrementScore1's location
-	    TextField inputScore1 = new TextField("0"); //Add textbox for setScore1 to use
+	    JTextField inputScore1 = new JTextField("0"); //Add textbox for setScore1 to use
 	    inputScore1.setBounds(240, 610, 210, 100); //Set inputScore1's location
 	    Button setScore1=new Button("Set Score"); //This button sets score1
 	    setScore1.setBounds(490,610,210,100); //Set setScore1's location
@@ -54,10 +54,20 @@ public class GraphicsImpl implements Graphics
 	    incrementScore2.setBounds(750,610,100,100); //Set incrementScore2's location
 	    Button decrementScore2=new Button("-10"); //This button decrements score2
 	    decrementScore2.setBounds(860,610,100,100); //Set decrementScore2's location
-	    TextField inputScore2 = new TextField("0"); //Add textbox for setScore2 to use
+	    JTextField inputScore2 = new JTextField("0"); //Add textbox for setScore2 to use
 	    inputScore2.setBounds(970, 610, 210, 100); //Set inputScore2's location
 	    Button setScore2=new Button("Set Score"); //This button sets score2
 	    setScore2.setBounds(1210,610,210,100); //Set setScore2's location
+	    
+	    //Create notification box & acknowledgement button
+	    JTextField notifications = new JTextField(); //Add textbox for setScore2 to use
+	    notifications.setBounds(25, frame.getHeight()-80, 1000, 50); //Set inputScore2's location
+	    Font notificationFont = new Font("MarkerFelt-Wide", Font.PLAIN, 48); //Create font for inputTime
+		notifications.setHorizontalAlignment(JTextField.CENTER); //inputTime text should be centered
+		notifications.setFont(notificationFont); //inputTime should have the font created above
+		notifications.setEditable(false); //Notification field should not be editable
+	    Button acknowledge=new Button("Clear Notification"); //This button sets score2
+	    acknowledge.setBounds(1035, frame.getHeight()-80, 390, 50); //Set setScore2's location
 	    /*
 		 * End creation of buttons & windows
 		 */
@@ -86,6 +96,9 @@ public class GraphicsImpl implements Graphics
 	    frame.add(decrementScore2); 
 	    frame.add(inputScore2);
 	    frame.add(setScore2);
+	    
+	    frame.add(notifications);
+	    frame.add(acknowledge);
 	    /*
 		 * End adding items to window
 		 */

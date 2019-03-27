@@ -76,21 +76,21 @@ public class GraphicsImpl implements Graphics
 		 * Begin assignment of button functions
 		 */
 	    //Controls to update timer
-	    startTime.addActionListener(new ActionListener()
+	    startTime.addActionListener(new ActionListener() //Dictates what happens when startTime button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
 	        	//TODO
 	        }  
 	    }); 
-	    stopReset.addActionListener(new ActionListener()
+	    stopReset.addActionListener(new ActionListener() //Dictates what happens when stopReset button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
 	        	//TODO
 	        }  
 	    }); 
-	    setTime.addActionListener(new ActionListener()
+	    setTime.addActionListener(new ActionListener() //Dictates what happens when setTime button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
@@ -99,21 +99,21 @@ public class GraphicsImpl implements Graphics
 	    }); 
 	    
 	    //Controls to update scorebox1
-	    incrementScore1.addActionListener(new ActionListener()
+	    incrementScore1.addActionListener(new ActionListener() //Dictates what happens when incrementScore1 button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
 	        	//TODO
 	        }  
 	    }); 
-	    decrementScore1.addActionListener(new ActionListener()
+	    decrementScore1.addActionListener(new ActionListener() //Dictates what happens when decrementScore1 button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
 	        	//TODO
 	        }  
 	    }); 
-	    setScore1.addActionListener(new ActionListener()
+	    setScore1.addActionListener(new ActionListener() //Dictates what happens when setScore1 button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
@@ -122,21 +122,30 @@ public class GraphicsImpl implements Graphics
 	    }); 
 	    
 	    //Controls to update scorebox2
-	    incrementScore2.addActionListener(new ActionListener()
+	    incrementScore2.addActionListener(new ActionListener() //Dictates what happens when incrementScore2 button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
 	        	//TODO
 	        }  
 	    }); 
-	    decrementScore2.addActionListener(new ActionListener()
+	    decrementScore2.addActionListener(new ActionListener() //Dictates what happens when decrementScore2 button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
 	        	//TODO
 	        }  
 	    }); 
-	    setScore2.addActionListener(new ActionListener()
+	    setScore2.addActionListener(new ActionListener() //Dictates what happens when setScore2 button is clicked
+	    {  
+	        public void actionPerformed(ActionEvent e)
+	        {
+		        //TODO
+	        }  
+	    }); 
+	    
+	    //Control to clear notification
+	    setScore2.addActionListener(new ActionListener() //Dictates what happens when acknowledge button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {

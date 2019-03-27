@@ -9,12 +9,19 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 
+import com.scorekeeper.model.scoreboard.Scoreboard;
+import com.scorekeeper.model.scoreboard.ScoreboardImpl;
+import com.scorekeeper.model.timer.Timer;
+import com.scorekeeper.model.timer.TimerImpl;
+
 public class GraphicsImpl implements Graphics
 {
 	public void start()
 	{
 		JFrame frame= new JFrame("Quidditch Scorekeeper"); //Create window with title "Quidditch Scorekeeper"
 		frame.setSize(1450, 800); //Set window size
+		final Scoreboard sb = new ScoreboardImpl(); //Creates a scoreboard object for use
+		final Timer t = new TimerImpl(); //Creates a timer object for use
 		
 		/*
 		 * Begin creation of buttons & windows
@@ -62,7 +69,7 @@ public class GraphicsImpl implements Graphics
 	    //Create notification box & acknowledgement button
 	    JTextField notifications = new JTextField(); //Add textbox for setScore2 to use
 	    notifications.setBounds(25, frame.getHeight()-80, 1000, 50); //Set inputScore2's location
-	    Font notificationFont = new Font("MarkerFelt-Wide", Font.PLAIN, 48); //Create font for inputTime
+	    Font notificationFont = new Font("MarkerFelt-Wide", Font.PLAIN, 24); //Create font for inputTime
 		notifications.setHorizontalAlignment(JTextField.CENTER); //inputTime text should be centered
 		notifications.setFont(notificationFont); //inputTime should have the font created above
 		notifications.setEditable(false); //Notification field should not be editable
@@ -80,21 +87,21 @@ public class GraphicsImpl implements Graphics
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
-	        	//TODO
+	        	t.startTime();
 	        }  
 	    }); 
 	    stopReset.addActionListener(new ActionListener() //Dictates what happens when stopReset button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
-	        	//TODO
+	        	t.stopTime();
 	        }  
 	    }); 
 	    setTime.addActionListener(new ActionListener() //Dictates what happens when setTime button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
-	        	//TODO
+	        	t.setTime(inputTime.getText());
 	        }  
 	    }); 
 	    
@@ -103,21 +110,21 @@ public class GraphicsImpl implements Graphics
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
-	        	//TODO
+	        	scorebox1.setText(String.valueOf(sb.incrementScore1()));
 	        }  
 	    }); 
 	    decrementScore1.addActionListener(new ActionListener() //Dictates what happens when decrementScore1 button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
-	        	//TODO
+	        	scorebox1.setText(String.valueOf(sb.decrementScore1()));
 	        }  
 	    }); 
 	    setScore1.addActionListener(new ActionListener() //Dictates what happens when setScore1 button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
-	        	//TODO
+	        	scorebox1.setText(String.valueOf(sb.setScore1(Integer.valueOf(inputScore1.getText()))));
 	        }  
 	    }); 
 	    
@@ -126,30 +133,30 @@ public class GraphicsImpl implements Graphics
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
-	        	//TODO
+	        	scorebox2.setText(String.valueOf(sb.incrementScore2()));
 	        }  
 	    }); 
 	    decrementScore2.addActionListener(new ActionListener() //Dictates what happens when decrementScore2 button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {  
-	        	//TODO
+	        	scorebox2.setText(String.valueOf(sb.decrementScore2()));
 	        }  
 	    }); 
 	    setScore2.addActionListener(new ActionListener() //Dictates what happens when setScore2 button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {
-		        //TODO
+	        	scorebox2.setText(String.valueOf(sb.setScore2(Integer.valueOf(inputScore2.getText()))));
 	        }  
 	    }); 
 	    
 	    //Control to clear notification
-	    setScore2.addActionListener(new ActionListener() //Dictates what happens when acknowledge button is clicked
+	    acknowledge.addActionListener(new ActionListener() //Dictates what happens when acknowledge button is clicked
 	    {  
 	        public void actionPerformed(ActionEvent e)
 	        {
-		        //TODO
+		        notifications.setText("");
 	        }  
 	    }); 
 	    /*

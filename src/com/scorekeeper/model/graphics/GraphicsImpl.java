@@ -1,8 +1,13 @@
 package com.scorekeeper.model.graphics;
 
 import java.awt.Button;
+import java.awt.Font;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
+import javax.swing.JTextField;
 
 public class GraphicsImpl implements Graphics
 {
@@ -11,6 +16,9 @@ public class GraphicsImpl implements Graphics
 		JFrame frame= new JFrame("Quidditch Scorekeeper"); //Create window with title "Quidditch Scorekeeper"
 		frame.setSize(1450, 800); //Set window size
 		
+		/*
+		 * Begin creation of buttons & windows
+		 */
 		//Create timebox
 		final Timebox timebox = new Timebox("00:00:00", 425, 25, 600, 150);
 		
@@ -23,46 +31,64 @@ public class GraphicsImpl implements Graphics
 	    startTime.setBounds(25,25,150,150); //Set startTime's location
 	    Button stopReset=new Button("Stop/Reset"); //This is the stop/reset button
 	    stopReset.setBounds(185,25,150,150); //Set stop/reset's location
+	    JTextField inputTime = new JTextField("00:00:00"); //Add textbox for setTime to use
+	    inputTime.setBounds(frame.getWidth()-350, 25, 325, 70); //Set inputTime's location
+	    Font inputTimeFont = new Font("MarkerFelt-Wide", Font.PLAIN, 48); //Create font for inputTime
+		inputTime.setHorizontalAlignment(JTextField.CENTER); //inputTime text should be centered
+		inputTime.setFont(inputTimeFont); //inputTime should have the font created above
 	    Button setTime=new Button("Set Time"); //This is the setTime button 
-	    setTime.setBounds(frame.getWidth()-350,25,325,150); //Set setTime's location
+	    setTime.setBounds(frame.getWidth()-350,105,325,70); //Set setTime's location
 
-	    //Create score controls
+	    //Create score1 controls
 	    Button incrementScore1=new Button("+10"); //This button increments score1
 	    incrementScore1.setBounds(25,610,100,100); //Set incrementScore1's location
 	    Button decrementScore1=new Button("-10"); //This button decrements score1
 	    decrementScore1.setBounds(130,610,100,100); //Set decrementScore1's location
+	    TextField inputScore1 = new TextField("0"); //Add textbox for setScore1 to use
+	    inputScore1.setBounds(240, 610, 210, 100); //Set inputScore1's location
 	    Button setScore1=new Button("Set Score"); //This button sets score1
 	    setScore1.setBounds(490,610,210,100); //Set setScore1's location
 	    
+	    //Create score2 controls
 	    Button incrementScore2=new Button("+10"); //This button increments score2
 	    incrementScore2.setBounds(750,610,100,100); //Set incrementScore2's location
 	    Button decrementScore2=new Button("-10"); //This button decrements score2
 	    decrementScore2.setBounds(860,610,100,100); //Set decrementScore2's location
+	    TextField inputScore2 = new TextField("0"); //Add textbox for setScore2 to use
+	    inputScore2.setBounds(970, 610, 210, 100); //Set inputScore2's location
 	    Button setScore2=new Button("Set Score"); //This button sets score2
 	    setScore2.setBounds(1210,610,210,100); //Set setScore2's location
+	    /*
+		 * End creation of buttons & windows
+		 */
 	    
-	    //Add timer to window
-		frame.add(timebox);
+	    /*
+		 * Begin adding items to window
+		 */
+		frame.add(timebox); //Add timer to window
 		
-		//Add timer controls to window
-		frame.add(startTime); 
+		frame.add(startTime); //Add timer controls to window
 	    frame.add(stopReset); 
+	    frame.add(inputTime);
 	    frame.add(setTime);
 		
-		//Add scoreboxes to window
-	    frame.add(scorebox1);
+	    frame.add(scorebox1); //Add scoreboxes to window
 	    frame.add(scorebox2);
 	    
-	    //Add score controls to window
-	    frame.add(startTime); 
+	    frame.add(startTime); //Add score controls to window
 	    frame.add(stopReset); 
 	    frame.add(setTime);
 	    frame.add(incrementScore1); 
 	    frame.add(decrementScore1); 
+	    frame.add(inputScore1);
 	    frame.add(setScore1);
 	    frame.add(incrementScore2); 
 	    frame.add(decrementScore2); 
+	    frame.add(inputScore2);
 	    frame.add(setScore2);
+	    /*
+		 * End adding items to window
+		 */
 	    
 	    //These things need to go last to prevent loading lag
 		frame.setLocationRelativeTo(null); //Centers window on screen

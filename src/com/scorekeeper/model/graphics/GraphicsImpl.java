@@ -1,13 +1,10 @@
 package com.scorekeeper.model.graphics;
 
 import java.awt.Button;
-import java.awt.Font;
-import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
-import javax.swing.JTextField;
 
 import com.scorekeeper.model.scoreboard.Scoreboard;
 import com.scorekeeper.model.scoreboard.ScoreboardImpl;
@@ -27,22 +24,18 @@ public class GraphicsImpl implements Graphics
 		 * Begin creation of buttons & windows
 		 */
 		//Create timebox
-		final Timebox timebox = new Timebox("00:00:00", 425, 25, 600, 150);
+		final QTextField timebox = new QTextField("00:00:00", 1, 425, 25, 600, 150);
 		
 		//Create scoreboxes
-		final Scorebox scorebox1=new Scorebox("0", 25, 200, 675, 400); //Set default value & position
-	    final Scorebox scorebox2=new Scorebox("0", 750, 200, 675, 400); //Set default value & position
+		final QTextField scorebox1=new QTextField("0", 2, 25, 200, 675, 400); //Set default value & position
+	    final QTextField scorebox2=new QTextField("0", 2, 750, 200, 675, 400); //Set default value & position
 		
 	    //Create time controls
 	    Button startTime=new Button("Start"); //This is the start button
 	    startTime.setBounds(25,25,150,150); //Set startTime's location
 	    Button stopReset=new Button("Stop/Reset"); //This is the stop/reset button
 	    stopReset.setBounds(185,25,150,150); //Set stop/reset's location
-	    JTextField inputTime = new JTextField("00:00:00"); //Add textbox for setTime to use
-	    inputTime.setBounds(frame.getWidth()-350, 25, 325, 70); //Set inputTime's location
-	    Font inputTimeFont = new Font("MarkerFelt-Wide", Font.PLAIN, 48); //Create font for inputTime
-		inputTime.setHorizontalAlignment(JTextField.CENTER); //inputTime text should be centered
-		inputTime.setFont(inputTimeFont); //inputTime should have the font created above
+	    QTextField inputTime = new QTextField("00:00:00", 3, frame.getWidth()-350, 25, 325, 70); //Add textbox for setTime to use
 	    Button setTime=new Button("Set Time"); //This is the setTime button 
 	    setTime.setBounds(frame.getWidth()-350,105,325,70); //Set setTime's location
 
@@ -51,11 +44,7 @@ public class GraphicsImpl implements Graphics
 	    incrementScore1.setBounds(25,610,100,100); //Set incrementScore1's location
 	    Button decrementScore1=new Button("-10"); //This button decrements score1
 	    decrementScore1.setBounds(130,610,100,100); //Set decrementScore1's location
-	    JTextField inputScore1 = new JTextField("000"); //Add textbox for setScore1 to use
-	    inputScore1.setBounds(240, 610, 210, 100); //Set inputScore1's location
-	    Font inputScoreFont = new Font("MarkerFelt-Wide", Font.PLAIN, 72); //Create font for setScore1
-		inputScore1.setHorizontalAlignment(JTextField.CENTER); //setScore1 text should be centered
-		inputScore1.setFont(inputScoreFont); //setScore1 should have the font created above
+	    QTextField inputScore1 = new QTextField("000", 4, 240, 610, 210, 100); //Add textbox for setScore1 to use
 	    Button setScore1=new Button("Set Score"); //This button sets score1
 	    setScore1.setBounds(490,610,210,100); //Set setScore1's location
 	    
@@ -64,20 +53,12 @@ public class GraphicsImpl implements Graphics
 	    incrementScore2.setBounds(750,610,100,100); //Set incrementScore2's location
 	    Button decrementScore2=new Button("-10"); //This button decrements score2
 	    decrementScore2.setBounds(860,610,100,100); //Set decrementScore2's location
-	    JTextField inputScore2 = new JTextField("000"); //Add textbox for setScore2 to use
-	    inputScore2.setBounds(970, 610, 210, 100); //Set inputScore2's location
-	    inputScore2.setHorizontalAlignment(JTextField.CENTER); //setScore1 text should be centered
-		inputScore2.setFont(inputScoreFont); //setScore1 should have the font created above
+	    QTextField inputScore2 = new QTextField("000", 4, 970, 610, 210, 100); //Add textbox for setScore2 to use
 	    Button setScore2=new Button("Set Score"); //This button sets score2
 	    setScore2.setBounds(1210,610,210,100); //Set setScore2's location
 	    
 	    //Create notification box & acknowledgement button
-	    JTextField notifications = new JTextField(); //Add textbox for setScore2 to use
-	    notifications.setBounds(25, frame.getHeight()-80, 1000, 50); //Set inputScore2's location
-	    Font notificationFont = new Font("MarkerFelt-Wide", Font.PLAIN, 24); //Create font for inputTime
-		notifications.setHorizontalAlignment(JTextField.CENTER); //inputTime text should be centered
-		notifications.setFont(notificationFont); //inputTime should have the font created above
-		notifications.setEditable(false); //Notification field should not be editable
+	    QTextField notifications = new QTextField("", 5, 25, frame.getHeight()-80, 1000, 50); //Add textbox for setScore2 to use
 	    Button acknowledge=new Button("Clear Notification"); //This button sets score2
 	    acknowledge.setBounds(1035, frame.getHeight()-80, 390, 50); //Set setScore2's location
 	    /*

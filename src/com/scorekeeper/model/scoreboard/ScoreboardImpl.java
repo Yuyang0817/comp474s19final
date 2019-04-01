@@ -21,6 +21,8 @@ public class ScoreboardImpl implements Scoreboard
 	public ScoreboardImpl(int score1, int score2)
 	{
 		//TODO
+		this.score1 = score1;
+		this.score2 = score2;
 	}
 	
 	/**
@@ -32,12 +34,17 @@ public class ScoreboardImpl implements Scoreboard
 	}
 
 	/**
-	 * @param score1 the score1 to set
+	 * 1 set score success, 0 fail
+	 *
+	 * @param score1 the score1 to set , must be multiples of 10
 	 */
 	public int setScore1(int score1)
 	{
 		//TODO
-		return 0;
+		if (score1 % 10 == 0) {
+			this.score1 = score1;
+		}
+		return this.score1;
 	}
 
 	/**
@@ -49,12 +56,17 @@ public class ScoreboardImpl implements Scoreboard
 	}
 
 	/**
-	 * @param score2 the score2 to set
+	 * 1 set score success, 0 fail
+	 *
+	 * @param score2 the score1 to set , must be multiples of 10
 	 */
 	public int setScore2(int score2)
 	{
 		//TODO
-		return 0;
+		if (score2 % 10 == 0) {
+			this.score2 = score2;
+		}
+		return this.score2;
 	}
 	
 	@Override

@@ -73,14 +73,20 @@ public class ScoreboardImpl implements Scoreboard
 	public int incrementScore1()
 	{
 		//TODO
-		return 0;
+        if (this.score1 < 990) {
+            this.score1 += 10;
+        }
+        return this.score1;
 	}
 	
 	@Override
 	public int incrementScore2()
 	{
 		//TODO
-		return 0;
+        if (this.score2 < 990) {
+            this.score2 += 10;
+        }
+        return this.score2;
 	}
 	
 	@Override

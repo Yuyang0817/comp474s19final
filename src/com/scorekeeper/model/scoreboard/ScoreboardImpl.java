@@ -88,7 +88,6 @@ public class ScoreboardImpl implements Scoreboard
 	@Override
 	public int incrementScore1()
 	{
-		//TODO
         if (this.score1 < 990) { //If score can be incremented
             this.score1 += 10; //Increment score
         }

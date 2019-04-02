@@ -93,14 +93,20 @@ public class ScoreboardImpl implements Scoreboard
 	public int decrementScore1()
 	{
 		//TODO
-		return 0;
+		if (this.score1 > 0) {
+			this.score1 -= 10;
+		}
+		return this.score1;
 	}
 	
 	@Override
 	public int decrementScore2()
 	{
 		//TODO
-		return 0;
+		if (this.score2 > 0) {
+			this.score2 -= 10;
+		}
+		return this.score2;
 	}
 
 	@Override

@@ -130,4 +130,16 @@ public class ScoreboardImpl implements Scoreboard
 		this.score1 = 0;
 		this.score2 = 0;
 	}
+	
+	private boolean isValid(int score)
+	{
+		if(score%10 == 0 //Checks that score is a multiple of 10
+		&& score>=0  //Checks that score is non-negative
+		&& score<=990) //Checks that score is at or below upper-bound
+		{
+			return true; //Return true if all conditions are met
+		}
+
+		return false; //Otherwise return false
+	}
 }

@@ -48,9 +48,7 @@ public class ScoreboardImpl implements Scoreboard
 	}
 
 	/**
-	 * 1 set score success, 0 fail
-	 *
-	 * @param score1 the score1 to set , must be multiples of 10
+	 * @param score1 the score1 to set
 	 */
 	public int setScore1(int score1)
 	{
@@ -71,8 +69,6 @@ public class ScoreboardImpl implements Scoreboard
 	}
 
 	/**
-	 * 1 set score success, 0 fail
-	 *
 	 * @param score2 the score1 to set , must be multiples of 10
 	 */
 	public int setScore2(int score2)

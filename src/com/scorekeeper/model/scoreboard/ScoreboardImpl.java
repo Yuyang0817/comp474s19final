@@ -113,17 +113,21 @@ public class ScoreboardImpl implements Scoreboard
 	public void resetScore1()
 	{
 		//TODO
+        this.score1 = 0;
 	}
 	
 	@Override
 	public void resetScore2()
 	{
 		//TODO
+        this.score2 = 0;
 	}
 	
 	@Override
 	public void resetScores()
 	{
 		//TODO
+		this.score1 = 0;
+		this.score2 = 0;
 	}
 }

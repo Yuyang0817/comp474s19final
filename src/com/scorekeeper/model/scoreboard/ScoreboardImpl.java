@@ -20,9 +20,23 @@ public class ScoreboardImpl implements Scoreboard
 	 */
 	public ScoreboardImpl(int score1, int score2)
 	{
-		//TODO
-		this.score1 = score1;
-		this.score2 = score2;
+		if(isValid(score1)) //Check score1 validity
+		{
+			this.score1 = score1;
+		}
+		else
+		{
+			this.score1 = 0; //Set to 0 otherwise
+		}
+
+		if(isValid(score2)) //Check score2 validity
+		{
+			this.score2 = score2;
+		}
+		else
+		{
+			this.score2 = 0; //Set to 0 otherwise
+		}
 	}
 	
 	/**
@@ -40,11 +54,12 @@ public class ScoreboardImpl implements Scoreboard
 	 */
 	public int setScore1(int score1)
 	{
-		//TODO
-		if (score1 % 10 == 0) {
+		if(isValid(score1)) //Update if valid
+		{
 			this.score1 = score1;
 		}
-		return this.score1;
+
+		return this.score1; //Return new score
 	}
 
 	/**
@@ -62,19 +77,20 @@ public class ScoreboardImpl implements Scoreboard
 	 */
 	public int setScore2(int score2)
 	{
-		//TODO
-		if (score2 % 10 == 0) {
+		if(isValid(score2)) //Update if valid
+		{
 			this.score2 = score2;
 		}
-		return this.score2;
+
+		return this.score2; //Return new score
 	}
 	
 	@Override
 	public int incrementScore1()
 	{
 		//TODO
-        if (this.score1 < 990) {
-            this.score1 += 10;
+        if (this.score1 < 990) { //If score can be incremented
+            this.score1 += 10; //Increment score
         }
         return this.score1;
 	}
@@ -82,9 +98,8 @@ public class ScoreboardImpl implements Scoreboard
 	@Override
 	public int incrementScore2()
 	{
-		//TODO
-        if (this.score2 < 990) {
-            this.score2 += 10;
+        if (this.score2 < 990) { //If score can be incremented
+            this.score2 += 10; //Increment score
         }
         return this.score2;
 	}
@@ -92,9 +107,8 @@ public class ScoreboardImpl implements Scoreboard
 	@Override
 	public int decrementScore1()
 	{
-		//TODO
-		if (this.score1 > 0) {
-			this.score1 -= 10;
+		if (this.score1 > 0) { //If score can be decremented
+			this.score1 -= 10; //Decrement score
 		}
 		return this.score1;
 	}
@@ -102,9 +116,8 @@ public class ScoreboardImpl implements Scoreboard
 	@Override
 	public int decrementScore2()
 	{
-		//TODO
-		if (this.score2 > 0) {
-			this.score2 -= 10;
+		if (this.score2 > 0) { //If score can be decremented
+			this.score2 -= 10; //Decrement score
 		}
 		return this.score2;
 	}
@@ -112,25 +125,27 @@ public class ScoreboardImpl implements Scoreboard
 	@Override
 	public void resetScore1()
 	{
-		//TODO
-        this.score1 = 0;
+        this.score1 = 0; //Reset score1 to 0
 	}
 	
 	@Override
 	public void resetScore2()
 	{
-		//TODO
-        this.score2 = 0;
+        this.score2 = 0; //Reset score2 to 0
 	}
 	
 	@Override
 	public void resetScores()
 	{
-		//TODO
-		this.score1 = 0;
+		this.score1 = 0; //Reset scores to 0
 		this.score2 = 0;
 	}
 	
+	/*
+	 * FUNCTION: Decides if a score is valid according to requirements doc
+	 * INPUT: An integer score
+	 * OUTPUT: Boolean result of validity test
+	 */
 	private boolean isValid(int score)
 	{
 		if(score%10 == 0 //Checks that score is a multiple of 10
